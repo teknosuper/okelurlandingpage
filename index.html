@@ -8,7 +8,13 @@
       name="description"
       content="Platform layanan digital Desa Ketitang Lor untuk akses aplikasi OKE LUR dan info desa."
     />
+    <meta name="theme-color" content="#0b1220" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="OKE LUR" />
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="apple-touch-icon" href="icons/icon-180.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -49,7 +55,17 @@
             </div>
           </div>
 
-          <div class="hero-pill hint" data-tooltip="Layanan digital resmi untuk warga">Layanan Publik Online</div>
+          <div class="hero-actions">
+            <div class="hero-pill hint" data-tooltip="Layanan digital resmi untuk warga">Layanan Publik Online</div>
+            <button
+              class="hero-pill hero-pill--install"
+              id="installAppButton"
+              type="button"
+              hidden
+            >
+              Install Web
+            </button>
+          </div>
         </div>
 
         <div class="hero-main">

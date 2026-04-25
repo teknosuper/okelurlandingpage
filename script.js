@@ -51,3 +51,44 @@ if (supportsFinePointer.matches) {
     card.addEventListener("blur", () => resetCard(card));
   });
 }
+
+const installAppButton = document.getElementById("installAppButton");
+let deferredInstallPrompt = null;
+
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("./sw.js").catch((error) => {
+      console.error("Service worker registration failed:", error);
+    });
+  });
+}
+
+window.addEventListener("beforeinstallprompt", (event) => {
+  event.preventDefault();
+  deferredInstallPrompt = event;
+
+  if (installAppButton) {
+    installAppButton.hidden = false;
+  }
+});
+
+if (installAppButton) {
+  installAppButton.addEventListener("click", async () => {
+    if (!deferredInstallPrompt) {
+      return;
+    }
+
+    deferredInstallPrompt.prompt();
+    await deferredInstallPrompt.userChoice;
+    deferredInstallPrompt = null;
+    installAppButton.hidden = true;
+  });
+}
+
+window.addEventListener("appinstalled", () => {
+  deferredInstallPrompt = null;
+
+  if (installAppButton) {
+    installAppButton.hidden = true;
+  }
+});
