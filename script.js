@@ -6,10 +6,10 @@ const releaseLoader = () => {
 };
 
 window.addEventListener("load", () => {
-  window.setTimeout(releaseLoader, 700);
+  window.setTimeout(releaseLoader, 1100);
 });
 
-window.setTimeout(releaseLoader, 2200);
+window.setTimeout(releaseLoader, 2600);
 
 const supportsFinePointer = window.matchMedia("(hover: hover) and (pointer: fine)");
 
