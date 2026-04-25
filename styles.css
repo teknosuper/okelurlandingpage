@@ -607,6 +607,12 @@ body.is-ready .viewport {
   transition: transform 180ms ease, color 180ms ease;
 }
 
+.cta-primary .cta-icon {
+  background: #ffffff;
+  border-color: rgba(255, 255, 255, 0.65);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
 .cta-secondary .cta-icon {
   color: #6ee7cf;
 }
@@ -615,6 +621,12 @@ body.is-ready .viewport {
   width: 34px;
   height: 34px;
   fill: currentColor;
+}
+
+.cta-icon-image {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
 }
 
 .cta-card:hover .cta-icon {
@@ -914,6 +926,11 @@ body.is-ready .viewport {
   .cta-icon svg {
     width: 30px;
     height: 30px;
+  }
+
+  .cta-icon-image {
+    width: 46px;
+    height: 46px;
   }
 
   .cta-copy span {
