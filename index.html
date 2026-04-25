@@ -17,6 +17,18 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <div class="page-loader" aria-hidden="true">
+      <div class="page-loader__inner">
+        <div class="page-loader__logo-wrap">
+          <img class="page-loader__logo" src="logookelur.png" alt="" />
+        </div>
+        <p class="page-loader__label">Aplikasi OKE LUR</p>
+        <div class="page-loader__bar">
+          <span class="page-loader__bar-fill"></span>
+        </div>
+      </div>
+    </div>
+
     <main class="viewport">
       <section class="hero-shell" aria-label="Akses layanan utama">
         <div class="mesh mesh-one" aria-hidden="true"></div>
@@ -24,7 +36,7 @@
 
         <div class="hero-top">
           <div class="brand-mark">
-            <div class="brand-logo-wrap">
+            <div class="brand-logo-wrap hint" data-tooltip="Identitas resmi Aplikasi OKE LUR">
               <img class="brand-logo" src="logookelur.png" alt="Logo OKE LUR" />
             </div>
             <div class="brand-copy">
@@ -33,7 +45,7 @@
             </div>
           </div>
 
-          <div class="hero-pill">Layanan Publik Online</div>
+          <div class="hero-pill hint" data-tooltip="Layanan digital resmi untuk warga">Layanan Publik Online</div>
         </div>
 
         <div class="hero-main">
@@ -48,15 +60,19 @@
 
           <div class="hero-side">
             <div class="signal-card">
-              <span>Administrasi</span>
-              <span>Layanan Mandiri</span>
-              <span>Portal Resmi</span>
+              <span class="hint" data-tooltip="Akses kebutuhan surat dan administrasi">Administrasi</span>
+              <span class="hint" data-tooltip="Masuk ke layanan warga secara mandiri">Layanan Mandiri</span>
+              <span class="hint" data-tooltip="Informasi resmi dan pembaruan desa">Portal Resmi</span>
             </div>
           </div>
         </div>
 
         <div class="cta-grid">
-          <a class="cta-card cta-primary" href="https://web.ketitanglor.id/layanan-mandiri/masuk">
+          <a
+            class="cta-card cta-primary hint js-tilt-card"
+            href="https://web.ketitanglor.id/layanan-mandiri/masuk"
+            data-tooltip="Buka aplikasi layanan mandiri warga"
+          >
             <span class="cta-glow" aria-hidden="true"></span>
             <span class="cta-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" role="img">
@@ -75,7 +91,11 @@
             </span>
           </a>
 
-          <a class="cta-card cta-secondary" href="https://web.ketitanglor.id">
+          <a
+            class="cta-card cta-secondary hint js-tilt-card"
+            href="https://web.ketitanglor.id"
+            data-tooltip="Kunjungi portal informasi desa"
+          >
             <span class="cta-glow" aria-hidden="true"></span>
             <span class="cta-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" role="img">
